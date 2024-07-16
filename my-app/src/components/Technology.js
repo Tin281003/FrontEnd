@@ -1,5 +1,5 @@
 import React from "react";
-import"../App.css";
+import"../styles/style.css";
 const Technology = () =>{
     return(
         <div className="margin_top5rem">

@@ -19,7 +19,7 @@ const PopularPosts= ({dataPopularPost}) => {
                                     >
                                         <a
                                             className="text-lg font-bold px-6 py-3 flex flex-row items-center"
-                                            href={}
+                                            href={`/news/${id}`}
                                         >
                                             {
                                                 <div
