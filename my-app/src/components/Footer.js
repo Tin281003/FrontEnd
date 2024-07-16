@@ -2,7 +2,7 @@ import React from "react";
 const Footer = () => {
     return(
         <div>
-            <footer className="bg-den text-xam-400">
+            <footer className="bg-den text-gray-400">
                 <div
                 id = "footer-content"
                 className="relative pt-8 xl:pt-16 pb-6 xl:pb-12"
@@ -11,7 +11,7 @@ const Footer = () => {
                         <div className= "flex flex-wrap flex-row lg:justify-between -mx-3">
                             <div className="flex-shrik max-w-full w-full lg:w-2/5 px-3 lg:pr-16">
                                 <div className="flex items-center mb-2">
-                                    <span className="text-3xl leading-normal mb-2 font-bold text-xam-100 mt-2">
+                                    <span className="text-3xl leading-normal mb-2 font-bold text-gray-100 mt-2">
                                         TLNews
                                     </span>
                                 </div>
@@ -22,7 +22,7 @@ const Footer = () => {
                                     <li className="inline-block">
                                         <a
                                             target = "_blank"
-                                            className="hover:text-xam-100"
+                                            className="hover:text-gray-100"
                                             rel="noopener noreferrer"
                                             href="https//facebook.com"
                                             title="Facebook"
@@ -34,7 +34,7 @@ const Footer = () => {
                                     <li className="inline-block">
                                         <a
                                             target="_blank"
-                                            className="hover:text-xam-100"
+                                            className="hover:text-gray-100"
                                             rel="noopener noreferrer"
                                             href="https://twitter.com"
                                             title="Twitter"
@@ -46,7 +46,7 @@ const Footer = () => {
                                     <li className="inline-block">
                                         <a
                                             target="_blank"
-                                            className="hover:text-xam-100"
+                                            className="hover:text-gray-100"
                                             rel="noopener noreferrer"
                                             href="https://youtube.com"
                                             title="Youtube"
@@ -57,7 +57,7 @@ const Footer = () => {
                                     <li classNameclassName="inline-block">
                                         <a
                                             target="_blank"
-                                            className="hover:text-xam-100"
+                                            className="hover:text-gray-100"
                                             rel="noopener noreferrer"
                                             href="https://instagram.com"
                                             title="Instagram"
@@ -70,55 +70,55 @@ const Footer = () => {
                             <div className="flex-shrink max-w-full w-full lg:w-3/5 px-3">
                                 <div className="flex flex-wrap flex-now">
                                     <div className="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
-                                        <h4 className="text-base leading-normal mb-3 uppercase text-xam-100">
+                                        <h4 className="text-base leading-normal mb-3 uppercase text-gray-100">
                                             Product
                                         </h4>
                                         <ul>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Landing</a>
                                             </li>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Sections</a>
                                             </li>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Sign up</a>
                                             </li>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Login</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div className="flex-shrink max-w-full w-1/2 md:w1/4 mb-6 lg:mb-0">
-                                        <h4 className="text-base leading-normal mb-3 uppercase text-xam-100">
+                                        <h4 className="text-base leading-normal mb-3 uppercase text-gray-100">
                                             Support
                                         </h4>
                                         <ul>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Changelog</a>
                                             </li>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Tools</a>
                                             </li>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Icons</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div className="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
-                                        <h4 className="text-base leading-normal mb-3 uppercase text-xam-100">
+                                        <h4 className="text-base leading-normal mb-3 uppercase text-gray-100">
                                             Includes
                                         </h4>
                                         <ul>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Utilities</a>
                                             </li>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Components</a>
                                             </li>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Example code</a>
                                             </li>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Updates</a>
                                             </li>
                                         </ul>
@@ -128,16 +128,16 @@ const Footer = () => {
                                             Legal
                                         </h4>
                                         <ul>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Privacy Policy</a>
                                             </li>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">Terms of Use</a>
                                             </li>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">License</a>
                                             </li>
-                                            <li className="py-1 hover:text-trang">
+                                            <li className="py-1 hover:text-white">
                                                 <a href="#">GDPR</a>
                                             </li>
                                         </ul>

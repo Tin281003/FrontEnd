@@ -26,7 +26,7 @@ function NewsArticle({article, isMainArticle}){
                        <h2
                            className={`${
                                isMainArticle
-                               ? "text-3xl font-bold capitalize text-trang mb-3"
+                               ? "text-3xl font-bold capitalize text-white mb-3"
                                : "text-lg font-bold capitalize leading-tight text-trang mb-1"    
                            }`}
                        >
