@@ -29,6 +29,7 @@ const Loading = () => {
             </svg>
         </div>
     );
+
 };
 
 export default Loading;
