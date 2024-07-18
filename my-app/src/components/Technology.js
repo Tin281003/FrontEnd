@@ -19,6 +19,7 @@ const Technology = () =>{
             </div>
         </div>
 
+
     );
 };
 export default Technology;
