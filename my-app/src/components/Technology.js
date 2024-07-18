@@ -18,8 +18,6 @@ const Technology = () =>{
                 </ul>
             </div>
         </div>
-
-
     );
 };
 export default Technology;
