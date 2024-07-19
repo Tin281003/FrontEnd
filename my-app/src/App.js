@@ -29,7 +29,7 @@ function App() {
         <Routes>
           <Route element={<Layout></Layout>}>
             <Route path="/" element={<Home />} />
-            {/*<Route path="/home" element={<Home />} />*/}
+            <Route path="/home" element={<Home />} />
             {/*<Route path="/du-lich" element={<Dulich />}></Route>*/}
             {/*<Route path="/the-thao" element={<Thethao />}></Route>*/}
             {/*<Route path="/cong-nghe" element={<CongNghe />}></Route>*/}
