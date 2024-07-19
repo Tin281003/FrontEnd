@@ -21,5 +21,6 @@ const recentSlice = createSlice({
         },
     },
 });
+
     export const { setLoading, setData, setError} = recentSlice.action;
      export default recentSlice.reducer;
