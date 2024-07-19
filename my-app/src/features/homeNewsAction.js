@@ -12,6 +12,7 @@ import {
     setDataPopularPost,
 } from "./homeNewsSlice";
 
+
 export const fetchRSSData = () => async (dispatch) =>{
     try {
         dispatch(setLoading(true));
@@ -19,6 +20,16 @@ export const fetchRSSData = () => async (dispatch) =>{
         const data = response.data.items;
         dispatch(setData(data));
         dispatch(setDataGrid(data.slice(0,5)));
+
+export const fetchRSSData = () => async (dispatch) => {
+    try {
+        dispatch(setLoading(true));
+
+        const response = await axios.get("http://localhost:4050/home");
+        const data = response.data.items;
+        dispatch(setData(data));
+        dispatch(setDataGrid(data.slice(0, 5)));
+
         const responseDataSection = await axios.get(
             "http://localhost:4050/thoi-su"
         );
@@ -30,6 +41,10 @@ export const fetchRSSData = () => async (dispatch) =>{
         );
         const responseDataPopularPost = await axios.get(
             "http://localhost:4050/tin-nong"
+
+        const responseDataBlock = await axios.get("http://localhost:4050/gioi-tre");
+        const responseDataPopularPost = await axios.get(
+            "http://localhost:4050/tin-24h"
         );
 
         const dataSection = responseDataSection.data.items;
@@ -45,9 +60,13 @@ export const fetchRSSData = () => async (dispatch) =>{
         dispatch(setDataPopularPost(dataPopularPost));
         dispatch(setLoading(false));
     } catch (error){
+
+        dispatch(setLoading(false));
+    } catch (error) {
         dispatch(setError(error));
         dispatch(setLoading(true));
         console.error("Error fetching RSS data:", error);
 
     }
+};
 };

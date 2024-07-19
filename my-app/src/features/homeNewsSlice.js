@@ -13,6 +13,18 @@ const homeNewsSlice = createSlice({
         dataSectionSecond:[],
         dataBlock: [],
         dataPopularPost:[],
+    initialState: {
+        url: "https://baotintuc.vn/",
+        loading: true,
+        data: [],
+        errorMessage: null,
+        dataGrid: [],
+        dataSection: [],
+        dataSlider: [],
+        dataSectionSecond: [],
+        dataBlock: [],
+        dataPopularPost: [],
+
     },
     reducers: {
         setLoading: (state, action) => {
@@ -37,6 +49,7 @@ const homeNewsSlice = createSlice({
             state.dataSlider = action.payload;
         },
         setDataSectionSecond:(state, action) => {
+        setDataSectionSecond: (state, action) => {
             state.dataSectionSecond = action.payload;
         },
         setDataBlock: (state, action) => {
@@ -61,4 +74,5 @@ export const {
     setDataPopularPost,
 } = homeNewsSlice.actions;
 
+export default homeNewsSlice.reducer;
 export default homeNewsSlice.reducer;
