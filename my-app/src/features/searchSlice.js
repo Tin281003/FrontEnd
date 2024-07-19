@@ -1,5 +1,5 @@
 import { createSlice} from "@reduxjs/toolkit";
-import {setData, setError} from "./recentSlice";
+import {setData, setError} from "./features./recentSlice";
 
 const initialState = {
     popular: [],
