@@ -20,7 +20,7 @@ const searchSlice = createSlice({
         setData: (state, action) => {
             state.data = action.payload;
         },
-setError:(state, action) => {
+         setError:(state, action) => {
             state.errorMessage = action.payload;
     },
     },
