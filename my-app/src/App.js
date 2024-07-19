@@ -13,7 +13,7 @@ import Layout from "./pages/Layout";
 import AmThuc from "./pages/AmThuc";
 // import DoiSongVanHoa from "./pages/DoiSongVanHoa";
 // import DuLich from "./pages/DoiSongVanHoa";
-// import ChuyenTheThao from "./pages/ChuyenTheThao";
+ import ChuyenTheThao from "./pages/ChuyenTheThao";
 // import TheThao24h from "./pages/TheThao24h";
 import OtoXeMay from "./pages/OtoXeMay";
 // import KhoaHocDoiSong from "./pages/KhoaHocDoiSong";
@@ -40,7 +40,7 @@ function App() {
             {/*    // path="/giai-tri-sao"*/}
             {/*    // element={<DuLich />}*/}
           {/*  ></Route>*/}
-          {/*  <Route path="/chuyen-the-thao" element={<ChuyenTheThao />}></Route>*/}
+          {  <Route path="/chuyen-the-thao" element={<ChuyenTheThao />}></Route>}
           {/*  <Route path="/the-thao-24h" element={<TheThao24h />}></Route>*/}
           {  <Route path="/o-to-xe-may" element={<OtoXeMay />}></Route>}
           {/*  <Route path="/khoa-hoc-doi-song" element={<KhoaHocDoiSong />}></Route>*/}
