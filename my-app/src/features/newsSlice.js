@@ -1,5 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
-
+import {createSlice} from "@reduxjs/toolkit";
 const initialState = {
     loading: true,
     data: null,
@@ -10,8 +9,8 @@ const initialState = {
 const newsSlice = createSlice({
     name: "news",
     initialState,
-    reducers: {
-        setLoading: (state, action) => {
+    reducers:{
+        setLoading:(state, action) => {
             state.loading = action.payload;
         },
         setData: (state, action) => {
@@ -32,7 +31,12 @@ const newsSlice = createSlice({
     },
 });
 
-export const { setLoading, setData, setError, setIsSave, clearData } =
+export const {
+    setLoading,
+    setData,
+    setError,
+    setIsSave,
+    clearData
+} =
     newsSlice.actions;
-
-export default newsSlice.reducer;
+ export default newsSlice.reducer;
