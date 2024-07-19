@@ -1,7 +1,6 @@
 import React from "react";
 
 const Loading = () => {
-    //Su dung JSX -> cau trucHTML
     return (
         <div className="flex flex-col items-center justify-center h-screen">
             <div className="text-5xl font-semibold mb-3">
@@ -30,7 +29,6 @@ const Loading = () => {
             </svg>
         </div>
     );
-
 };
 
 export default Loading;

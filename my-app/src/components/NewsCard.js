@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+
 const NewsCard = ({ imgSrc, title, content, category, link }) => {
-    const id = link.replace("https://thanhnien.vn/", "");
+    const id = link.replace("https://baotintuc.vn/", "");
     return (
         <div className="flex-shrink w-full max-w-full px-3 pt-3 pb-3 border-b-2 border-gray-100 border-dotted sm:w-1/3 sm:pt-0 sm:border-b-0">
             <div className="flex flex-row sm:block hover-img">
@@ -28,4 +29,5 @@ const NewsCard = ({ imgSrc, title, content, category, link }) => {
         </div>
     );
 };
+
 export default NewsCard;
