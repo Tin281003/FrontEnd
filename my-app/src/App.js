@@ -11,6 +11,7 @@ import Layout from "./pages/Layout";
 // import Thethao from "./pages/Thethao";
 // import CongNghe from "./pages/CongNghe";
 import AmThuc from "./pages/AmThuc";
+import VanHoa from "./pages/VanHoa";
 // import DoiSongVanHoa from "./pages/DoiSongVanHoa";
 // import DuLich from "./pages/DoiSongVanHoa";
  import ChuyenTheThao from "./pages/ChuyenTheThao";
@@ -28,7 +29,7 @@ function App() {
           <Route element={<Layout></Layout>}>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            {/*<Route path="/van-hoa" element={<VanHoa />}></Route>*/}
+            {<Route path="/van-hoa" element={<VanHoa />}></Route>}
             {/*<Route path="/the-thao" element={<TheThao />}></Route>*/}
             {/*<Route path="/cong-nghe" element={<CongNghe />}></Route>*/}
             {<Route path="/am-thuc" element={<AmThuc />}></Route>}

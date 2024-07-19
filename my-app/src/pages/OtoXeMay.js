@@ -21,7 +21,7 @@ const initialState = {
     dataBlock: [],
 };
 
-const OToXeMayReducer = (state, action) => {
+const OToXeMayNewsReducer = (state, action) => {
     switch (action.type) {
         case "SET_LOADING":
             return {...state, loading: action.payload};
@@ -49,7 +49,7 @@ const OToXeMayReducer = (state, action) => {
 };
 
 const OtoXeMay = () => {
-    const [state, dispatch] = React.useReducer(OToXeMayReducer, initialState);
+    const [state, dispatch] = React.useReducer(OToXeMayNewsReducer, initialState);
 
     async function fetchData() {
         try {
