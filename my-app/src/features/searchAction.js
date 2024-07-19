@@ -22,6 +22,5 @@ export const fetchRSSData =(keywords) => async (dispatch) =>{
         dispatch(setError(error));
         dispatch(setLoading(true));
         console.error("Error fetching RSS data:",error);
-
     }
 };
