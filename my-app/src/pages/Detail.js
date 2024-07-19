@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ReadLink from "../components/ReadLink ";
+import ReadLink from "../components/ReadHtml ";
 
 const Detail =() =>{
     return(
