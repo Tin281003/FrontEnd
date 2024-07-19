@@ -1,24 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./styles/Detail.css";
+import '~@fortawesome/fontawesome-free/css/fontawesome.css';
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+// import Dulich from "./pages/Dulich";
+import Home from "./pages/Home";
+// import News from "./pages/News";
+import Layout from "./pages/Layout";
+// import Thethao from "./pages/Thethao";
+// import CongNghe from "./pages/CongNghe";
+// import KhamPha from "./pages/KhamPha";
+// import CauChuyenDuLich from "./pages/CauChuyenDuLich";
+// import BatDongSanDuLich from "./pages/ChoiGiAnDau";
+// import SeaGame32 from "./pages/SeaGame32";
+// import BongRo from "./pages/BongRo";
+// import TheThaoKhac from "./pages/TheThaoKhac";
+// import SanPhamCN from "./pages/SanPhamCN";
+// import Esports from "./pages/Esports";
+// import Blockchain from "./pages/Blockchain";
+// import Search from "./pages/Search";
+// import Recent from "./pages/Recent";
+// import Saved from "./pages/Saved";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <Routes>
+          <Route element={<Layout></Layout>}>
+            <Route path="/" element={<Home />} />
+            {/*<Route path="/home" element={<Home />} />*/}
+            {/*<Route path="/du-lich" element={<Dulich />}></Route>*/}
+            {/*<Route path="/the-thao" element={<Thethao />}></Route>*/}
+            {/*<Route path="/cong-nghe" element={<CongNghe />}></Route>*/}
+            {/*<Route path="/kham-pha" element={<KhamPha />}></Route>*/}
+            {/*<Route*/}
+            {/*    path="/cau-chuyen-du-lich"*/}
+            {/*    element={<CauChuyenDuLich />}*/}
+            {/*></Route>*/}
+            {/*<Route*/}
+            {/*    // path="/choi-gi-an-dau-di-the-nao"*/}
+            {/*    // element={<BatDongSanDuLich />}*/}
+          {/*  ></Route>*/}
+          {/*  <Route path="/sea-games-32" element={<SeaGame32 />}></Route>*/}
+          {/*  <Route path="/bong-ro" element={<BongRo />}></Route>*/}
+          {/*  <Route path="/the-thao-khac" element={<TheThaoKhac />}></Route>*/}
+          {/*  <Route path="/san-pham" element={<SanPhamCN />}></Route>*/}
+          {/*  <Route path="/esports" element={<Esports />}></Route>*/}
+          {/*  <Route path="/blockchain" element={<Blockchain />}></Route>*/}
+          {/*  <Route path="/search" element={<Search />}></Route>*/}
+          {/*  <Route path="/tin-da-xem" element={<Recent />}></Route>*/}
+          {/*  <Route path="/tin-da-luu" element={<Saved />}></Route>*/}
+          {/*  <Route path="/news/:newsId" element={<News />}></Route>*/}
+          </Route>
+        </Routes>
+      </div>
   );
 }
 
