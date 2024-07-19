@@ -2,17 +2,17 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const homeNewsSlice = createSlice({
     name: "homeNews",
-    initialState: {
-        url: "https://baotintuc.vn/",
+    getInitialState:{
+        url: "https://baotintuc.vn/tin-moi-nhat.rss",
         loading: true,
-        data: [],
+        data:[],
         errorMessage: null,
         dataGrid: [],
-        dataSection: [],
-        dataSlider: [],
-        dataSectionSecond: [],
+        dataSection:[],
+        dataSlider:[],
+        dataSectionSecond:[],
         dataBlock: [],
-        dataPopularPost: [],
+        dataPopularPost:[],
     },
     reducers: {
         setLoading: (state, action) => {
@@ -36,7 +36,7 @@ const homeNewsSlice = createSlice({
         setDataSlider: (state, action) => {
             state.dataSlider = action.payload;
         },
-        setDataSectionSecond: (state, action) => {
+        setDataSectionSecond:(state, action) => {
             state.dataSectionSecond = action.payload;
         },
         setDataBlock: (state, action) => {
