@@ -1,9 +1,9 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState= {
-    loading:true,
-    data:[],
-    errorMessage:null,
+const initialState = {
+    loading: true,
+    data: [],
+    errorMessage: null,
 };
 
 const recentSlice = createSlice({
@@ -11,7 +11,7 @@ const recentSlice = createSlice({
     initialState,
     reducers: {
         setLoading: (state, action) => {
-            state.loading = acction.payload;
+            state.loading = action.payload;
         },
         setData: (state, action) => {
             state.data = action.payload;
@@ -22,5 +22,6 @@ const recentSlice = createSlice({
     },
 });
 
-    export const { setLoading, setData, setError} = recentSlice.action;
-     export default recentSlice.reducer;
+export const { setLoading, setData, setError } = recentSlice.actions;
+
+export default recentSlice.reducer;

@@ -1,5 +1,4 @@
-import { createSlice} from "@reduxjs/toolkit";
-import {setData, setError} from "./features./recentSlice";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     popular: [],
@@ -7,23 +6,27 @@ const initialState = {
     errorMessage: "",
     data: [],
 };
+
 const searchSlice = createSlice({
-    name:"search",
+    name: "search",
     initialState,
-    reducers:{
-        setLoading:(state, action) =>{
+    reducers: {
+        setLoading: (state, action) => {
             state.loading = action.payload;
         },
-        setPopular:(state, action) => {
-            state.popular = action, payload;
+        setPopular: (state, action) => {
+            state.popular = action.payload;
         },
         setData: (state, action) => {
             state.data = action.payload;
         },
-         setError:(state, action) => {
+        setError: (state, action) => {
             state.errorMessage = action.payload;
-    },
+        },
     },
 });
-export const { setLoading, setPopular, setData, setError} = searchSlice.action;
+
+export const { setLoading, setPopular, setData, setError } =
+    searchSlice.actions;
+
 export default searchSlice.reducer;
