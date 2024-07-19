@@ -19,6 +19,8 @@ app.get("/home", (req, res) => {
     });
 });
 
+app.listen(3000, () => {
+    console.log("Server is running on port 3000");
 app.get("/thoi-su", async (req, res) => {
     try {
         const parser = new Parser();
