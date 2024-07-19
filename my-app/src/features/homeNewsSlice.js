@@ -4,6 +4,7 @@ const homeNewsSlice = createSlice({
     name: "homeNews",
     getInitialState:{
         url: "https://baotintuc.vn/tin-moi-nhat.rss",
+
         loading: true,
         data:[],
         errorMessage: null,
@@ -15,15 +16,20 @@ const homeNewsSlice = createSlice({
         dataPopularPost:[],
     initialState: {
         url: "https://baotintuc.vn/",
+
         loading: true,
-        data: [],
+        data:[],
         errorMessage: null,
         dataGrid: [],
-        dataSection: [],
-        dataSlider: [],
-        dataSectionSecond: [],
+        dataSection:[],
+        dataSlider:[],
+        dataSectionSecond:[],
         dataBlock: [],
+
+        dataPopularPost:[],
+
         dataPopularPost: [],
+
 
     },
     reducers: {
@@ -49,7 +55,10 @@ const homeNewsSlice = createSlice({
             state.dataSlider = action.payload;
         },
         setDataSectionSecond:(state, action) => {
+
+
         setDataSectionSecond: (state, action) => {
+
             state.dataSectionSecond = action.payload;
         },
         setDataBlock: (state, action) => {
@@ -74,5 +83,9 @@ export const {
     setDataPopularPost,
 } = homeNewsSlice.actions;
 
+
+export default homeNewsSlice.reducer;
+
 export default homeNewsSlice.reducer;
 export default homeNewsSlice.reducer;
+
