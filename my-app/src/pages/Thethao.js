@@ -10,7 +10,7 @@ import Loading from "../components/Loading";
 import Sport from "../components/Sport";
 
 const initialState={
-    url:"https://thanhnien.vn/rss/the-thao/sea-games-32.rss",
+    url:"https://baotintuc.vn/the-thao/chuyen-the-thao.rss",
     loading:true,
     data:[],
     errorMessage:null,
@@ -50,7 +50,7 @@ const Thethao =() => {
     const [state, dispatch] = React.useReducer(ThethaoNewsReducer, initialState);
     async function fetchData() {
         try {
-            const response = await axios.get("https://localhost:4050/sea-games-32");
+            const response = await axios.get("https://localhost:4050/chuyen-the-thao");
             const data = response.data.slice(0, 5);
             //Handle the data
             console.log(data);
@@ -60,16 +60,14 @@ const Thethao =() => {
                 payload: data.slice(0, 5),
             });
             const responseDataSection = await axios.get(
-                "http://localhost:4050/sea-games-32"
+                "http://localhost:4050/chuyen-the-thao"
             );
             const responseDataSlider = await axios.get(
-                "http://localhost:4050/bong-ro"
+                "http://localhost:4050/the-thao-24h"
             );
-            const responseDataBlock = await axios.get(
-                "http://localhost:4050/the-thao-khac"
-            );
+
             const responseDataPopularPost = await axios.get(
-                "http://localhost:4050/bong-ro"
+                "http://localhost:4050/chuyen-the-thao"
             );
             const dataSection = responseDataSection.data;
             const dataSlider = responseDataSlider.data;
