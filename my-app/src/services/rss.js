@@ -60,7 +60,7 @@ app.get("/tin-24h", async (req, res) => {
 });
 
 //DU LỊCH
-app.get("/van-hoa", async (req, res) => {
+app.get("/du-lich", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL("https://baotintuc.vn/van-hoa.rss");
@@ -70,7 +70,7 @@ app.get("/van-hoa", async (req, res) => {
     }
 });
 
-app.get("/doi-song-van-hoa", async (req, res) => {
+app.get("/cau-chuyen-du-lich", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL(
@@ -82,7 +82,7 @@ app.get("/doi-song-van-hoa", async (req, res) => {
     }
 });
 
-app.get("/am-thuc", async (req, res) => {
+app.get("/kham-pha", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL(
@@ -93,7 +93,7 @@ app.get("/am-thuc", async (req, res) => {
         res.status(500).json({ type: "error", message: error.message });
     }
 });
-app.get("/giai-tri-sao", async (req, res) => {
+app.get("/choi-gi-an-dau-di-the-nao", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL(
@@ -104,7 +104,7 @@ app.get("/giai-tri-sao", async (req, res) => {
         res.status(500).json({ type: "error", message: error.message });
     }
 });
-app.get("/du-lich", async (req, res) => {
+app.get("/bat-dong-san-du-lich", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL(
@@ -125,7 +125,7 @@ app.get("/the-thao", async (req, res) => {
         res.status(500).json({ type: "error", message: error.message });
     }
 });
-app.get("/bong-da", async (req, res) => {
+app.get("/bong-da-viet-nam", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL(
@@ -136,7 +136,7 @@ app.get("/bong-da", async (req, res) => {
         res.status(500).json({ type: "error", message: error.message });
     }
 });
-app.get("/tennis", async (req, res) => {
+app.get("/bong-da-quoc-te", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL(
@@ -147,7 +147,7 @@ app.get("/tennis", async (req, res) => {
         res.status(500).json({ type: "error", message: error.message });
     }
 });
-app.get("/the-thao-24h", async (req, res) => {
+app.get("/bong-ro", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL(
@@ -158,7 +158,7 @@ app.get("/the-thao-24h", async (req, res) => {
         res.status(500).json({ type: "error", message: error.message });
     }
 });
-app.get("/chuyen-the-thao", async (req, res) => {
+app.get("/sea-games-32", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL(
@@ -193,7 +193,7 @@ app.get("/cong-nghe", async (req, res) => {
         res.status(500).json({ type: "error", message: error.message });
     }
 });
-app.get("/o-to-xe-may", async (req, res) => {
+app.get("/san-pham", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL(
@@ -204,7 +204,7 @@ app.get("/o-to-xe-may", async (req, res) => {
         res.status(500).json({ type: "error", message: error.message });
     }
 });
-app.get("/dien-tu-vien-thong", async (req, res) => {
+app.get("/tin-tuc-cong-nghe", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL(
@@ -215,7 +215,7 @@ app.get("/dien-tu-vien-thong", async (req, res) => {
         res.status(500).json({ type: "error", message: error.message });
     }
 });
-app.get("/khoa-hoc-doi-song", async (req, res) => {
+app.get("/blockchain", async (req, res) => {
     try {
         const parser = new Parser();
         const feed = await parser.parseURL(
