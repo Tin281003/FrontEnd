@@ -28,24 +28,22 @@ function App() {
           <Route element={<Layout></Layout>}>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            {/*<Route path="/du-lich" element={<Dulich />}></Route>*/}
-            {/*<Route path="/the-thao" element={<Thethao />}></Route>*/}
+            {/*<Route path="/van-hoa" element={<VanHoa />}></Route>*/}
+            {/*<Route path="/the-thao" element={<TheThao />}></Route>*/}
             {/*<Route path="/cong-nghe" element={<CongNghe />}></Route>*/}
-            {/*<Route path="/kham-pha" element={<KhamPha />}></Route>*/}
+            {/*<Route path="/am-thuc" element={<AmThuc />}></Route>*/}
             {/*<Route*/}
-            {/*    path="/cau-chuyen-du-lich"*/}
-            {/*    element={<CauChuyenDuLich />}*/}
+            {/*    path="/doi-song-van-hoa"*/}
+            {/*    element={<DoiSongVanHoa />}*/}
             {/*></Route>*/}
             {/*<Route*/}
-            {/*    // path="/choi-gi-an-dau-di-the-nao"*/}
-            {/*    // element={<BatDongSanDuLich />}*/}
+            {/*    // path="/giai-tri-sao"*/}
+            {/*    // element={<DuLich />}*/}
           {/*  ></Route>*/}
-          {/*  <Route path="/sea-games-32" element={<SeaGame32 />}></Route>*/}
-          {/*  <Route path="/bong-ro" element={<BongRo />}></Route>*/}
-          {/*  <Route path="/the-thao-khac" element={<TheThaoKhac />}></Route>*/}
-          {/*  <Route path="/san-pham" element={<SanPhamCN />}></Route>*/}
-          {/*  <Route path="/esports" element={<Esports />}></Route>*/}
-          {/*  <Route path="/blockchain" element={<Blockchain />}></Route>*/}
+          {/*  <Route path="/chuyen-the-thao" element={<ChuyenTheThao />}></Route>*/}
+          {/*  <Route path="/the-thao-24h" element={<TheThao24h />}></Route>*/}
+          {/*  <Route path="/oto-xe-may" element={<OtoXeMay />}></Route>*/}
+          {/*  <Route path="/khoa-hoc-doi-song" element={<KhoaHocDoiSong />}></Route>*/}
           {/*  <Route path="/search" element={<Search />}></Route>*/}
           {/*  <Route path="/tin-da-xem" element={<Recent />}></Route>*/}
           {/*  <Route path="/tin-da-luu" element={<Saved />}></Route>*/}
