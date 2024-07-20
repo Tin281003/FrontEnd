@@ -7,11 +7,11 @@ import SliderNews from "../components/SliderNews";
 import NewsBlock from "../components/NewsBlock";
 import PopularPosts from "../components/PopularPosts ";
 import Loading from "../components/Loading";
-import Sport from "../components/Sport";
-import NewsSon from "../components/NewsSon";
+import Travel from "../components/Culture";
+import Technology from "../components/Technology";
 
 const initialState = {
-    url: "https://https://baotintuc.vn/chuyen-the-thao.rss",
+    url: "https://baotintuc.vn/dien-tu-vien-thong.rss",
     loading: true,
     data: [],
     errorMessage: null,
@@ -20,10 +20,9 @@ const initialState = {
     dataSlider: [],
     dataSectionSecond: [],
     dataBlock: [],
-    dataSon: [],
 };
 
-const ChuyenTheThaoNewsReducer = (state, action) => {
+const ConNgheNewsReducer = (state, action) => {
     switch (action.type) {
         case "SET_LOADING":
             return { ...state, loading: action.payload };
@@ -43,8 +42,6 @@ const ChuyenTheThaoNewsReducer = (state, action) => {
             return { ...state, dataSectionSecond: action.payload };
         case "SET_DATA_BLOCK":
             return { ...state, dataBlock: action.payload };
-        case "SET_DATA_SON":
-            return { ...state, dataBlock: action.payload };
         case "SET_DATA_POPURLAR_POST":
             return { ...state, dataPopularPost: action.payload };
         default:
@@ -52,13 +49,13 @@ const ChuyenTheThaoNewsReducer = (state, action) => {
     }
 };
 
-const ChuyenTheThao = () => {
-    const [state, dispatch] = React.useReducer(ChuyenTheThaoNewsReducer, initialState);
+const CongNghe = () => {
+    const [state, dispatch] = React.useReducer(CongNgheNewsReducer, initialState);
     async function fetchData() {
         try {
-            const response = await axios.get("http://localhost:4050/chuyen-the-thao");
+            const response = await axios.get("http://localhost:4050/o-to-xe-may");
             const data = response.data.slice(0,5);
-
+            // Handle the data
             console.log(data);
             dispatch({ type: "SET_DATA", payload: data });
             dispatch({
@@ -66,28 +63,21 @@ const ChuyenTheThao = () => {
                 payload: data.slice(0,5),
             });
             const responseDataSection = await axios.get(
-                "http://localhost:4050/chuyen-the-thao"
+                "http://localhost:4050/o-to-xe-may"
             );
             const responseDataSlider = await axios.get(
-                "http://localhost:4050/the-thao-24h"
+                "http://localhost:4050/cong-nghe"
             );
-            const responseDataSon= await axios.get(
-                "http://localhost:4050/am-thuc"
-            );
-            const responseDataBlock = await axios.get(
-                "http://localhost:4050/chuyen-the-thao"
-            );
-            const responseDataPopularPost = await axios.get(
-                "http://localhost:4050/chuyen-the-thao"
-            );
+            // const responseDataPopularPost = await axios.get(
+            //     "http://localhost:4050/blockchain"
+            // );
             const dataSection = responseDataSection.data;
             const dataSlider = responseDataSlider.data;
-            const dataSon = responseDataSon.data;
             const dataSectionSecond = responseDataSection.data;
             const dataBlock = responseDataBlock.data;
             const dataPopularPost = responseDataPopularPost.data;
 
-            // console.log(dataSection);
+
             dispatch({ type: "SET_DATA_SECTION", payload: dataSection.slice(0, 9) });
             dispatch({ type: "SET_DATA_SLIDER", payload: dataSlider });
             dispatch({
@@ -95,7 +85,6 @@ const ChuyenTheThao = () => {
                 payload: dataSectionSecond.slice(9,19),
             });
             dispatch({ type: "SET_DATA_BLOCK", payload: dataBlock });
-            dispatch({ type: "SET_DATA_SON", payload: dataSon });
             dispatch({ type: "SET_DATA_POPURLAR_POST", payload: dataPopularPost });
             dispatch({ type: "SET_LOADING", payload: false });
         } catch (error) {
@@ -109,32 +98,18 @@ const ChuyenTheThao = () => {
     useEffect(() => {
         fetchData();
     }, [state.url]);
-
-    return (
+     return (
         <div className="text-gray-700 pt-9 sm:pt-10 text-left">
-            <div className="margin_top5rem ">
-                <h1 className="h1 category-page__name text-center">Thể Thao</h1>
-                <div>
-                    <ul className="flex justify-center ">
-                        <li className="">
-                            <a className="block py-3 px-6 border-b-2 border-transparent text-lg" style={{color:"red" }} href="../chuyen-the-thao">Chuyện thể thao</a>
-                        </li>
-                        <li className="">
-                            <a  className="block py-3 px-6 border-b-2 border-transparent text-lg" href="../the-thao-24h">Thể thao 24h</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
+            <Technology></Technology>
             {state.loading && <Loading></Loading>}
             {!state.loading && state.errorMessage && (
                 <p className="text-red-400 my-5">{state.errorMessage}</p>
             )}
             <main id="content">
+                <NewsGrid newsArticles={state.dataGrid} />
                 <div className="bg-white py-6">
                     <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
                         <div className="flex flex-row flex-wrap">
-                            <NewsSon dataSon={state.dataSon}></NewsSon>
                             <NewsBlock dataBlock={state.dataBlock}></NewsBlock>
                             <PopularPosts
                                 dataPopularPost={state.dataPopularPost}
@@ -143,6 +118,7 @@ const ChuyenTheThao = () => {
                     </div>
                 </div>
                 <NewsSection dataSection={state.dataSection}></NewsSection>
+                <NewsSection dataSection={state.dataSectionSecond}></NewsSection>
                 <SliderNews dataSlider={state.dataSlider}></SliderNews>
             </main>
 
@@ -150,4 +126,4 @@ const ChuyenTheThao = () => {
     );
 }
 
-export default ChuyenTheThao
+export default CongNghe
