@@ -10,7 +10,7 @@ import Loading from "../components/Loading";
 import Sport from "../components/Sport";
 
 const initialState = {
-    url: "https://baotintuc.vn/khoa-hoc-doi-song.rss",
+    url: "https://baotintuc.vn/dien-tu-vien-thong/khoa-hoc-doi-song.rss",
     loading: true,
     data: [],
     errorMessage: null,
