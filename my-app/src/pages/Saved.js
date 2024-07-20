@@ -1,10 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-roter-dom";
 
-const Recent = () =>{
-    const data = JSON.parse(localStorage.getItem("newsData")) || [];
+const Saved = () => {
+    const data = JSON.parse(localStorage.getItem("newSave")) || [];
     console.log(data);
-    return (
+    return(
         <main id="content">
             <div className="py-6 bg-gray-50">
                 <div className="px-3 mx-auto xl:container sm:px-4 xl:px-2">
@@ -14,15 +14,14 @@ const Recent = () =>{
                                 <div className="w-full py-3 mb-4">
                                     <h2 className="text-3xl font-bold text-gray-800">
                                         <span className="inline-block h-5 mr-2 border-red-600 border-l-3"></span>{" "}
-                                        Tin đã xem
+                                        Tin đã lưu
                                     </h2>
                                 </div>
                             </div>
                             {data.length > 0 &&
                                 data.map((item) => {
                                     const id = item.linkHtml.replace("https://baotintuc.vn/", "");
-
-                                    return (
+                                    return(
                                         <div
                                             key={item.linkHtml}
                                             className="flex-shrink w-full max-w-full px-3 pt-3 pb-3 border-b-2 border-gray-100 border-dotted sm:w-1/3 sm:pt-0 sm:border-b-0"
@@ -68,4 +67,4 @@ const Recent = () =>{
     );
 };
 
-export default Recent
+export default Saved

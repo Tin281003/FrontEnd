@@ -18,10 +18,17 @@ import VanHoa from "./pages/VanHoa";
  import ChuyenTheThao from "./pages/ChuyenTheThao";
  import TheThao24h from "./pages/TheThao24h";
 import OtoXeMay from "./pages/OtoXeMay";
+
 import KhoaHocDoiSong from "./pages/KhoaHocDoiSong";
 // import Search from "./pages/Search";
 // import Recent from "./pages/Recent";
 // import Saved from "./pages/Saved";
+
+// import KhoaHocDoiSong from "./pages/KhoaHocDoiSong";
+ import Search from "./pages/Search";
+ import Recent from "./pages/Recent";
+ import Saved from "./pages/Saved";
+
 
 function App() {
   return (
@@ -46,9 +53,9 @@ function App() {
           {/*  <Route path="/the-thao-24h" element={<TheThao24h />}></Route>*/}
           {  <Route path="/o-to-xe-may" element={<OtoXeMay />}></Route>}
           {/*  <Route path="/khoa-hoc-doi-song" element={<KhoaHocDoiSong />}></Route>*/}
-          {/*  <Route path="/search" element={<Search />}></Route>*/}
-          {/*  <Route path="/tin-da-xem" element={<Recent />}></Route>*/}
-          {/*  <Route path="/tin-da-luu" element={<Saved />}></Route>*/}
+          {  <Route path="/search" element={<Search />}></Route>}
+          {  <Route path="/tin-da-xem" element={<Recent />}></Route>}
+          {  <Route path="/tin-da-luu" element={<Saved />}></Route>}
           {  <Route path="/news/:newsId" element={<News />}></Route>}
           </Route>
         </Routes>
