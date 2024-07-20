@@ -20,7 +20,7 @@ const initialState = {
     dataSectionSecond: [],
     dataBlock: [],
 };
-const KhoahocdoisongNewsReducer = (state, action) => {
+const KhoaHocDoiSongNewsReducer = (state, action) => {
     switch (action.type) {
         case "SET_LOADING":
             return { ...state, loading: action.payload };
@@ -47,7 +47,7 @@ const KhoahocdoisongNewsReducer = (state, action) => {
     }
 };
 
-const Khoahocdoisong = () => {
+const KhoaHocDoiSong = () => {
     const [state, dispatch] = React.useReducer(KhoahocdoisongNewsReducer, initialState);
     async function fetchData() {
         try {
@@ -142,4 +142,4 @@ const Khoahocdoisong = () => {
     );
 }
 
-export default Khoahocdoisong
+export default KhoaHocDoiSong
