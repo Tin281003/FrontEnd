@@ -20,7 +20,7 @@ const initialState = {
     dataSectionSecond: [],
     dataBlock: [],
 };
-const Thethao24hNewsReducer = (state, action) => {
+const TheThao24hNewsReducer = (state, action) => {
     switch (action.type) {
         case "SET_LOADING":
             return { ...state, loading: action.payload };
@@ -47,7 +47,7 @@ const Thethao24hNewsReducer = (state, action) => {
     }
 };
 
-const Thethao24h = () => {
+const TheThao24h = () => {
     const [state, dispatch] = React.useReducer(Thethao24hNewsReducer, initialState);
     async function fetchData() {
         try {
@@ -141,4 +141,4 @@ const Thethao24h = () => {
     );
 }
 
-export default Thethao24h
+export default TheThao24h

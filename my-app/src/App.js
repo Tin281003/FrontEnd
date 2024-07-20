@@ -8,19 +8,27 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Layout from "./pages/Layout";
-// import Thethao from "./pages/Thethao";
+
+import Thethao from "./pages/Thethao";
 // import CongNghe from "./pages/CongNghe";
 import AmThuc from "./pages/AmThuc";
 import VanHoa from "./pages/VanHoa";
 // import DoiSongVanHoa from "./pages/DoiSongVanHoa";
 // import DuLich from "./pages/DoiSongVanHoa";
  import ChuyenTheThao from "./pages/ChuyenTheThao";
-// import TheThao24h from "./pages/TheThao24h";
+ import TheThao24h from "./pages/TheThao24h";
 import OtoXeMay from "./pages/OtoXeMay";
+
+import KhoaHocDoiSong from "./pages/KhoaHocDoiSong";
+// import Search from "./pages/Search";
+// import Recent from "./pages/Recent";
+// import Saved from "./pages/Saved";
+
 // import KhoaHocDoiSong from "./pages/KhoaHocDoiSong";
  import Search from "./pages/Search";
  import Recent from "./pages/Recent";
  import Saved from "./pages/Saved";
+
 
 function App() {
   return (
