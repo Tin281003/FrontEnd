@@ -20,7 +20,7 @@ import OtoXeMay from "./pages/OtoXeMay";
 // import KhoaHocDoiSong from "./pages/KhoaHocDoiSong";
  import Search from "./pages/Search";
 // import Recent from "./pages/Recent";
-// import Saved from "./pages/Saved";
+ import Saved from "./pages/Saved";
 
 function App() {
   return (
@@ -47,7 +47,7 @@ function App() {
           {/*  <Route path="/khoa-hoc-doi-song" element={<KhoaHocDoiSong />}></Route>*/}
           {  <Route path="/search" element={<Search />}></Route>}
           {/*  <Route path="/tin-da-xem" element={<Recent />}></Route>*/}
-          {/*  <Route path="/tin-da-luu" element={<Saved />}></Route>*/}
+          {  <Route path="/tin-da-luu" element={<Saved />}></Route>}
           {  <Route path="/news/:newsId" element={<News />}></Route>}
           </Route>
         </Routes>
