@@ -114,10 +114,7 @@ const OtoXeMay = () => {
                             <a className="block py-3 px-6 border-b-2 border-transparent text-lg"
                                href="../khoa-hoc-doi-song">Khoa học đời sống</a>
                         </li>
-                        {/*<li className="">*/}
-                        {/*    <a className="block py-3 px-6 border-b-2 border-transparent text-lg"*/}
-                        {/*       href="../esports"> Esports</a>*/}
-                        {/*</li>*/}
+
                         <li className="">
                             <a className="block py-3 px-6 border-b-2 border-transparent text-lg" href="../dien-tu-vien-thong"> Điện tử-viễn thông </a>
                         </li>
