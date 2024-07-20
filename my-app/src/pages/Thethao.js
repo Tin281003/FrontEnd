@@ -124,3 +124,4 @@ useEffect(() => {
     );
 
 }
+export default Thethao

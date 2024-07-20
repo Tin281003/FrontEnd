@@ -77,7 +77,7 @@ const Header = () => {
                                         className="block px-6 py-3 border-b-2 border-transparent"
                                         to="du-lich"
                                     >
-                                        Du Lịch
+                                        Văn hóa
                                     </NavLink>
                                 </li>
                                 <li className="relative border-l border-gray-800 hover:bg-gray-900">
@@ -88,14 +88,7 @@ const Header = () => {
                                         Công Nghệ
                                     </NavLink>
                                 </li>
-                                <li className="relative border-l border-gray-800 hover:bg-gray-900">
-                                    <NavLink
-                                        className="block px-6 py-3 border-b-2 border-transparent"
-                                        to="kham-pha"
-                                    >
-                                        Giới Trẻ
-                                    </NavLink>
-                                </li>
+
                                 <li className="relative border-l border-gray-800 hover:bg-gray-900">
                                     <NavLink
                                         className="block px-6 py-3 border-b-2 border-transparent"
@@ -261,7 +254,7 @@ const Header = () => {
                                         to="du-lich"
                                         className="block px-5 py-2 border-b border-gray-100 hover:bg-gray-50"
                                     >
-                                        Du lịch
+                                        Văn hóa
                                     </NavLink>
                                 </li>
 
@@ -271,15 +264,6 @@ const Header = () => {
                                         className="block px-5 py-2 border-b border-gray-100 hover:bg-gray-50"
                                     >
                                         Công nghệ
-                                    </NavLink>
-                                </li>
-
-                                <li className="relative">
-                                    <NavLink
-                                        to="kham-pha"
-                                        className="block px-5 py-2 border-b border-gray-100 hover:bg-gray-50"
-                                    >
-                                        Giới trẻ
                                     </NavLink>
                                 </li>
                             </ul>
