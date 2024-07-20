@@ -7,6 +7,7 @@ import SliderNews from "../components/SliderNews";
 import NewsBlock from "../components/NewsBlock";
 import PopularPosts from "../components/PopularPosts ";
 import Loading from "../components/Loading";
+import Travel from "../components/Culture";
 import Technology from "../components/Technology";
 
 const initialState = {
