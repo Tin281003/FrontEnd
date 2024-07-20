@@ -19,7 +19,7 @@ import VanHoa from "./pages/VanHoa";
 import OtoXeMay from "./pages/OtoXeMay";
 // import KhoaHocDoiSong from "./pages/KhoaHocDoiSong";
  import Search from "./pages/Search";
-// import Recent from "./pages/Recent";
+ import Recent from "./pages/Recent";
  import Saved from "./pages/Saved";
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
           {  <Route path="/o-to-xe-may" element={<OtoXeMay />}></Route>}
           {/*  <Route path="/khoa-hoc-doi-song" element={<KhoaHocDoiSong />}></Route>*/}
           {  <Route path="/search" element={<Search />}></Route>}
-          {/*  <Route path="/tin-da-xem" element={<Recent />}></Route>*/}
+          {  <Route path="/tin-da-xem" element={<Recent />}></Route>}
           {  <Route path="/tin-da-luu" element={<Saved />}></Route>}
           {  <Route path="/news/:newsId" element={<News />}></Route>}
           </Route>
