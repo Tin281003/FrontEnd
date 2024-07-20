@@ -108,10 +108,10 @@ const TheThao24h = () => {
                 <div>
                     <ul className="flex justify-center ">
                         <li className="">
-                            <a className="block py-3 px-6 border-b-2 border-transparent text-lg"  href="../sea-games-32"> Chuyện thể thao  </a>
+                            <a className="block py-3 px-6 border-b-2 border-transparent text-lg"  href="../chuyen-the-thao"> Chuyện thể thao  </a>
                         </li>
                         <li className="">
-                            <a  className="block py-3 px-6 border-b-2 border-transparent text-lg" style={{color:"red" }} href="../bong-ro">Thể thao 24h  </a>
+                            <a  className="block py-3 px-6 border-b-2 border-transparent text-lg" style={{color:"red" }} href="../the-thao-24h">Thể thao 24h  </a>
                         </li>
                     </ul>
                 </div>

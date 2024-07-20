@@ -7,10 +7,11 @@ import SliderNews from "../components/SliderNews";
 import NewsBlock from "../components/NewsBlock";
 import PopularPosts from "../components/PopularPosts ";
 import Loading from "../components/Loading";
-import Sport from "../components/Sport";
+import Travel from "../components/Culture";
+import Technology from "../components/Technology";
 
 const initialState = {
-    url: "https://baotintuc.vn/dien-tu-vien-thong/khoa-hoc-doi-song.rss",
+    url: "https://baotintuc.vn/van-hoa/doi-song-van-hoa.rss",
     loading: true,
     data: [],
     errorMessage: null,
@@ -20,7 +21,7 @@ const initialState = {
     dataSectionSecond: [],
     dataBlock: [],
 };
-const KhoaHocDoiSongNewsReducer = (state, action) => {
+const DoiSongVanHoaNewsReducer = (state, action) => {
     switch (action.type) {
         case "SET_LOADING":
             return { ...state, loading: action.payload };
@@ -47,11 +48,11 @@ const KhoaHocDoiSongNewsReducer = (state, action) => {
     }
 };
 
-const KhoaHocDoiSong = () => {
-    const [state, dispatch] = React.useReducer(KhoaHocDoiSongNewsReducer, initialState);
+const DoiSongVanHoa = () => {
+    const [state, dispatch] = React.useReducer(DoiSongVanHoaNewsReducer, initialState);
     async function fetchData() {
         try {
-            const response = await axios.get("http://localhost:4050/khoa-hoc-doi-song");
+            const response = await axios.get("http://localhost:4050/doi-song-van-hoa");
             const data = response.data.slice(0,5);
             // Handle the data
             console.log(data);
@@ -61,16 +62,16 @@ const KhoaHocDoiSong = () => {
                 payload: data.slice(0,5),
             });
             const responseDataSection = await axios.get(
-                "http://localhost:4050/khoa-hoc-doi-song"
+                "http://localhost:4050/doi-song-van-hoa"
             );
             const responseDataSlider = await axios.get(
-                "http://localhost:4050/o-to-xe-may"
+                "http://localhost:4050/giai-tri-sao"
             );
             const responseDataBlock = await axios.get(
-                "http://localhost:4050/khoa-hoc-doi-song"
+                "http://localhost:4050/doi-song-van-hoa"
             );
             const responseDataPopularPost = await axios.get(
-                "http://localhost:4050/khoa-hoc-doi-song"
+                "http://localhost:4050/doi-song-van-hoa"
             );
             const dataSection = responseDataSection.data;
             const dataSlider = responseDataSlider.data;
@@ -79,11 +80,11 @@ const KhoaHocDoiSong = () => {
             const dataPopularPost = responseDataPopularPost.data;
 
             // console.log(dataSection);
-            dispatch({ type: "SET_DATA_SECTION", payload: dataSection.slice(0, 9) });
+            dispatch({ type: "SET_DATA_SECTION", payload: dataSection.slice(0, 10) });
             dispatch({ type: "SET_DATA_SLIDER", payload: dataSlider });
             dispatch({
                 type: "SET_DATA_SECTION_SECOND",
-                payload: dataSectionSecond.slice(9,19),
+                payload: dataSectionSecond.slice(0,30),
             });
             dispatch({ type: "SET_DATA_BLOCK", payload: dataBlock });
             dispatch({ type: "SET_DATA_POPURLAR_POST", payload: dataPopularPost });
@@ -104,14 +105,17 @@ const KhoaHocDoiSong = () => {
     return (
         <div className="text-gray-700 pt-9 sm:pt-10 text-left">
             <div className="margin_top5rem ">
-                <h1 className="h1 category-page__name text-center">Khoa học công nghệ </h1>
+                <h1 className="h1 category-page__name text-center">Văn hóa</h1>
                 <div>
                     <ul className="flex justify-center ">
                         <li className="">
-                            <a className="block py-3 px-6 border-b-2 border-transparent text-lg" href="../o-to-xe-may">Ô tô xe máy</a>
+                            <a className="block py-3 px-6 border-b-2 border-transparent text-lg"  href="../am-thuc"> Ẩm thực </a>
                         </li>
                         <li className="">
-                            <a  className="block py-3 px-6 border-b-2 border-transparent text-lg" style={{color:"red" }} href="../khoa-hoc-doi-song">Khoa học đời sống </a>
+                            <a  className="block py-3 px-6 border-b-2 border-transparent text-lg" href="../giai-tri-sao">Giải trí sao </a>
+                        </li>
+                        <li className="">
+                            <a className="block py-3 px-6 border-b-2 border-transparent text-lg" style={{color:"red" }} href="../doi-song-van-hoa"> Đời sống văn hóa </a>
                         </li>
 
                     </ul>
@@ -142,4 +146,4 @@ const KhoaHocDoiSong = () => {
     );
 }
 
-export default KhoaHocDoiSong
+export default DoiSongVanHoa;

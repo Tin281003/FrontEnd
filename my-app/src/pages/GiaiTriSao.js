@@ -108,13 +108,13 @@ const GiaiTriSao =() =>{
                 <div>
                     <ul className="flex justify-center ">
                         <li className="">
-                            <a className="block py-3 px-6 border-b-2 border-transparent text-lg"  href="../kham-pha">Ẩm thực</a>
+                            <a className="block py-3 px-6 border-b-2 border-transparent text-lg"  href="../am-thuc">Ẩm thực</a>
                         </li>
                         <li className="">
                             <a  className="block py-3 px-6 border-b-2 border-transparent text-lg" style={{color:"red" }} href="../giai-tri-sao">Giải trí sao</a>
                         </li>
                         <li className="">
-                            <a className="block py-3 px-6 border-b-2 border-transparent text-lg" href="../cau-chuyen-du-lich"> Đời sống văn hóa</a>
+                            <a className="block py-3 px-6 border-b-2 border-transparent text-lg" href="../doi-song-van-hoa"> Đời sống văn hóa</a>
                         </li>
 
                     </ul>
